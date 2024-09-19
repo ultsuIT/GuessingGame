@@ -14,7 +14,6 @@ public class Lucky7 {
         System.out.println("Onnea Matkaan!");
         
         int i= 0;
-        int luku = 0;
         int pelikassa = Integer.parseInt(pelisumma);
         int laina = 0;
         
@@ -25,7 +24,7 @@ public class Lucky7 {
             
             //the game selects three random numbers
             for (i = 0; i < 3; i++){ 
-                luku = random.nextInt(11);
+                int luku = random.nextInt(10) + 1;
                 System.out.println(luku);
                 
                 //case lucky7:
@@ -49,10 +48,6 @@ public class Lucky7 {
                     }   
                 }
                 
-                //if none of the three numbers are 7, this is printed
-                if (i == 3 && luku != 7){
-                    System.out.println("Huono mäihä, hävisit.");
-                }
             } 
 
             //Game is over, 1 euro is taken from the game account, printing the balance of the game account
